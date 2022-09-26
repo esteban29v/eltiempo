@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('description')->nullable();
             $table->decimal('price', 12, 4);
-            $table->decimal('in_stock',  3, 2);
+            $table->integer('in_stock');
             $table->boolean('active_for_sale', true);
 
             $table->timestamps();
