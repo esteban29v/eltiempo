@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ProductController;
 use App\Http\Controllers\UserController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -22,4 +23,6 @@ Route::post('user/login', [UserController::class, 'attemptLogin'])->name('users.
 Route::middleware('auth:sanctum')->group(function() {
 
     Route::apiResource('user', UserController::class)->except('store')->names('users');
+
+    Route::apiResource('product', ProductController::class)->names('products');
 });
