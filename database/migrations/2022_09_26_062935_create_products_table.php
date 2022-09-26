@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('description')->nullable();
             $table->decimal('price', 12, 4);
             $table->integer('in_stock');
-            $table->boolean('active_for_sale', true);
+            $table->boolean('active_for_sale')->default(true);
 
             $table->timestamps();
         });
