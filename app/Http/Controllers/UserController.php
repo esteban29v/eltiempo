@@ -34,7 +34,8 @@ class UserController extends Controller
 
             return response()->json([
                 'res' => false,
-                'msg' => 'An error occurred while creating the user' 
+                'msg' => 'An error occurred while creating the user',
+                'error' => $e->getMessage()
             ], 500);
         }
 
@@ -86,7 +87,8 @@ class UserController extends Controller
 
             return response()->json([
                 'res' => false,
-                'msg' => 'An error occurred while login' 
+                'msg' => 'An error occurred while login',
+                'error' => $e->getMessage()
             ], 500);
         }
     }
